@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 // import './Home.css';
 import { Container, Row, Col,Card,Modal} from "react-bootstrap";
-import react from "../src/assets/img/hero.png";
-import java from "../src/assets/img/java.png";
-import html from "../src/assets/img/html.png";
-import android from "../src/assets/img/android.png";
+import react from "../assets/react.png";
+import java from "../assets/java.png";
+import html from "../assets/html-png.png";
+// import android from "../assets/android.png";
 
 const Home = () => {
   const [isShow,setisShow] = useState(false)

@@ -1,5 +1,6 @@
 import { color, motion } from "framer-motion";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Links() {
   const variants = {
@@ -25,20 +26,45 @@ function Links() {
       opacity: 0,
     },
   };
-  const items = ["Home", "About Us", "Skills", "Project", "Contact Us"];
+ 
 
   return (
     <motion.div className="links" variants={variants}>
-      {items.map((item) => (
-        <motion.a
-          href={item}
-          key={item}
-          variants={itemsVariants}
-          whileHover={{ scale: 1.1 }}
-        >
-          {item}
-        </motion.a>
-      ))}
+     <motion.a>
+
+<Link to={'/home'}>Home</Link>
+
+     </motion.a>
+
+
+     <motion.a>
+
+About Us
+
+     </motion.a
+     
+     >
+     <motion.a>
+
+Skills
+
+     </motion.a>
+
+
+     <motion.a>
+
+Project
+
+     </motion.a>
+
+     <motion.a>
+
+Contact us
+
+     </motion.a>
+     
+
+
     </motion.div>
   );
 }

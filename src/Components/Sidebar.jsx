@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { delay, motion } from "framer-motion";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Home from './Home.jsx';
 
 import "./css/sidebar.css";
 import ToggleBtn from "./ToggleBtn";
@@ -7,7 +10,7 @@ import Links from "./Links";
 
 function Sidebar() {
   const [open, setOpen] = useState(false);
-  
+
   let variants = {
     open: {
       clipPath: "circle(1200px at 50px 50px)",
@@ -27,13 +30,30 @@ function Sidebar() {
     },
   };
   return (
-    <motion.div className="sidebar-main" animate={open ? "open" : "closed"}>
-      <motion.div className="sidebar-bg" variants={variants}>
-        <Links />
-      </motion.div>
-      <ToggleBtn setOpen={setOpen} />
+    <BrowserRouter>
+      <motion.div className="sidebar-main" animate={open ? "open" : "closed"}>
+        <motion.div className="sidebar-bg" variants={variants}>
 
-    </motion.div>
+
+
+
+          <Links />
+          <Routes>
+            <Route path="/home" element={<Home />} />
+
+
+
+          </Routes>
+
+
+
+
+
+        </motion.div>
+        <ToggleBtn setOpen={setOpen} />
+
+      </motion.div>
+    </BrowserRouter>
   );
 }
 

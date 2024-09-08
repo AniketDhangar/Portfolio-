@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/hero.css";
-import heroImage from "../assets/hero.png";
+import Heroimage from "../assets/hero1.png" ;
 import scrollpng from "../assets/scroll.png";
 import { animate, stagger, motion } from "framer-motion";
 
@@ -82,7 +82,7 @@ function Hero() {
         Future Full Stack Developer
       </motion.div>
       <div className="imageContainer">
-        <img src={heroImage} alt="" />
+        <img src={Heroimage} alt="" />
       </div>
     </div>
   );
